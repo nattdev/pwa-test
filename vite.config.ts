@@ -5,6 +5,9 @@ import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
   includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
+  workbox: {
+    globPatterns: ['**/*.{js,css,html,svg}'],
+  },
   manifest: {
     name: 'Mi PWA',
     short_name: 'PWA',
